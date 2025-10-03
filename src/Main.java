@@ -22,14 +22,25 @@ public class Main {
        Zoo zoo = new Zoo();
        zoo.name = "frigya";
        zoo.city ="nfidha";
-       zoo.nbrCages=600;
        System.out.println(zoo);
 
        Animal animal2 = new Animal("Chat","michou",1,true);
        System.out.println(animal2);
-       Zoo zoo2 = new Zoo("My Zoo","tunisia",50);
+       Zoo zoo2 = new Zoo("My Zoo","tunisia");
       System.out.println(zoo2);
+      System.out.println(zoo2.addAnimal(animal));
+              System.out.println(zoo2.addAnimal(animal));
+              System.out.println(zoo2.addAnimal(animal)
 
-
+              );
+      System.out.println(zoo.addAnimal(animal2));
+       System.out.println(zoo.addAnimal(animal2));
+       System.out.println(zoo.addAnimal(animal2));
+       zoo.afficherZoo();
+       System.out.println(zoo.chercherAnimal(animal2));
+       System.out.println(zoo.removeAnimal(animal));
+       System.out.println(zoo.isZooFull());
+       System.out.println(zoo.isZooFull1());
+       System.out.println(Zoo.comparerZoo(zoo, zoo2));
     }
 }
