@@ -1,9 +1,11 @@
+package entity;
+
 public class Zoo {
     Animal[] animals =new Animal[10]; // (tableau d’animaux, maximum 25)
-    String name;
-	String city;
-	final int nbrCages =25;
-    int nbAnimals=0;
+    private String name;
+	 private String city;
+	private final int nbrCages =25;
+    private int nbAnimals=0;
 
     public Zoo() {}
     public Zoo(String name, String city) {
@@ -22,12 +24,18 @@ public class Zoo {
     for (int i=0; i<animals.length; i++){
         if (animals[i]==null)
             return -1;
-        if (animals[i].name.equals(animal.name))
+        if (animals[i].getName().equals(animal.getName()))
             return i;
     }
     return -1;
     }
     public boolean addAnimal(Animal animal) {
+        if(isZooFull()){
+            System.out.println("entity.Zoo Full");
+            return false;
+
+
+        }
         if(chercherAnimal(animal)!=-1)
             return false;
 
@@ -74,7 +82,45 @@ public   static   Zoo comparerZoo(Zoo z1, Zoo z2){
         return z2;
     return z1;
     }
-public String toString(){
-    return "Zoo: " + name + " " + city + " " + nbrCages;
+
+    public String getName(){return name;}
+
+
+    public Animal[] getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public int getNbrCages() {
+        return nbrCages;
+    }
+
+    public int getNbAnimals() {
+        return nbAnimals;
+    }
+
+    public void setNbAnimals(int nbAnimals) {
+        this.nbAnimals = nbAnimals;
+    }
+
+
+
+    public String toString(){
+    return "entity.Zoo: " + name + " " + city + " " + nbrCages;
 }
 }
