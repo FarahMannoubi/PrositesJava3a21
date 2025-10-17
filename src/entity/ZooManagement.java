@@ -1,6 +1,6 @@
 package entity;
 
-public  class ZooManagement {
+public final   class ZooManagement extends Admin {
 
     int nbrCages =20;
     String zooName="My zoo";
@@ -10,4 +10,8 @@ public String toString(){
 }
 
 
+    @Override
+    public void calculateSalary() {
+
+    }
 }

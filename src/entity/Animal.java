@@ -1,10 +1,10 @@
 package entity;
 
-public class Animal {
-    private String family;
-    private String name;
-    private int age;
-    private boolean isMammal;
+public sealed class Animal permits Aquatic,Terrestrial {
+    protected String family;
+    protected String name;
+    protected int age;
+    protected boolean isMammal;
 
 public Animal() {}
 public Animal(String family, String name, int age, boolean isMammall) {

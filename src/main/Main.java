@@ -1,8 +1,6 @@
 package main;
 
-import entity.Animal;
-import entity.Animal2;
-import entity.Zoo;
+import entity.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -49,6 +47,19 @@ public class Main {
        System.out.println(Zoo.comparerZoo(zoo, zoo2));
         Animal2 animal3 = new Animal2();
         animal3.name="";
-
+        Aquatic aquatic = new Aquatic();
+        Terrestrial terrestrial = new Terrestrial();
+        Dolphin dolphin = new Dolphin("Dolphin","dofdof",2,true,"habitat",3);
+        Penguin penguin = new Penguin("Penguin","batbout",1,false,"habitat",3);
+   System.out.println(aquatic);
+   System.out.println(terrestrial);
+   System.out.println(dolphin);
+   System.out.println(penguin);
+   aquatic.swim();
+  dolphin.swim();
+  dolphin.swim(3);
+        System.out.println(aquatic.talk());
+        System.out.println(dolphin.talk("testtt"));
+  penguin.swim();
     }
 }
