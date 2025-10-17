@@ -3,6 +3,12 @@ package entity;
 public sealed class Aquatic extends Animal permits Dolphin,Penguin {
     protected String habitat;
     public Aquatic() {}
+
+    @Override
+    public void affiche() {
+        System.out.println("Aquatic : " + habitat);
+    }
+
     public Aquatic(String family, String name, int age, boolean isMammall,String habitat) {
         super(family, name, age, isMammall);
         this.habitat = habitat;

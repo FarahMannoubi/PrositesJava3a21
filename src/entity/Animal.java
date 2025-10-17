@@ -1,6 +1,6 @@
 package entity;
 
-public sealed class Animal permits Aquatic,Terrestrial {
+public abstract sealed class Animal permits Aquatic,Terrestrial {
     protected String family;
     protected String name;
     protected int age;
@@ -14,7 +14,7 @@ setAge(age);
 isMammal = isMammall;
 }
 
-
+public abstract void affiche();
 
 public String getName (){return name ;
 
