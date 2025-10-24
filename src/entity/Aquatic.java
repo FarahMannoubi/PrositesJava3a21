@@ -1,6 +1,6 @@
 package entity;
 
-public sealed class Aquatic extends Animal permits Dolphin,Penguin {
+public abstract sealed class Aquatic extends Animal permits Dolphin,Penguin {
     protected String habitat;
     public Aquatic() {}
 
@@ -13,13 +13,18 @@ public sealed class Aquatic extends Animal permits Dolphin,Penguin {
         super(family, name, age, isMammall);
         this.habitat = habitat;
     }
-    public void swim(){
-        System.out.println("This aquatic animal is swimming");
-    }
+    public abstract void swim();
     public String talk(){
         return "from Aquatic "+habitat;
     }
-
+public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if(obj == null) return false;
+       if(obj instanceof Aquatic aquatic){
+           return this.habitat.equals(aquatic.habitat)&&this.name.equals(aquatic.name)&&this.age == aquatic.getAge();
+       }
+       return false;
+}
     public String toString() {
         return super.toString()+"habitat: " +habitat;
     }

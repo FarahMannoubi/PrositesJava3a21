@@ -2,7 +2,11 @@ package entity;
 
 public non-sealed class Penguin extends Aquatic {
     private float swimmingDepth;
-    public Penguin(String family, String name, int age, boolean isMammall,String habitat,float swimmingDepth) {
+
+    public Penguin() {
+    }
+
+    public Penguin(String family, String name, int age, boolean isMammall, String habitat, float swimmingDepth) {
       /*this.family = family;
       this.name = name;
       this.age = age;
@@ -14,6 +18,14 @@ public non-sealed class Penguin extends Aquatic {
 //    public Penguin() {
 //        super();
 //    }
+
+    public float getSwimmingDepth() {
+        return swimmingDepth;
+    }
+
+    public void setSwimmingDepth(float swimmingDepth) {
+        this.swimmingDepth = swimmingDepth;
+    }
 
     @Override
     public void swim() {

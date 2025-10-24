@@ -12,6 +12,12 @@ public final class Dolphin extends Aquatic {
     public String talk(String habitat){
         return habitat+"lala";
     }
+
+    @Override
+    public void swim() {
+        System.out.println("This dolphin is swimming");
+    }
+
     public String toString() {
         return super.toString()+ "swimming speed: " + swimmingSpeed;
     }
